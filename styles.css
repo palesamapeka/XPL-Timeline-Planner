@@ -1,27 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
-input,
-button {
-    margin: 5px 0;
-    padding: 5px;
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container label {
+  margin: auto;
+  padding: 1.5em;
+  background-color: #fff;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.container input[type="file"] {
+  margin: auto;
+  padding: 1.5em;
+  border: 2px dashed #bbb;
+  background-color: #fff;
+  transition: border-color 0.25s ease-in-out;
+
+  &::file-selector-button {
+    padding: 1em 1.5em;
+    border-width: 0;
+    border-radius: 2em;
+    background-color: hsl(210 70% 30%);
+    color: hsl(210 40% 90%);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+
+  &:hover {
+    border-color: #888;
+
+    &::file-selector-button {
+      background-color: hsl(210 70% 40%);
+    }
+  }
+}
+
+.container input[type="date"]{
+    margin: auto;
+  padding: 1.5em;
+  border: 2px dashed #bbb;
+  background-color: #fff;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.container button {
+  margin: auto;
+  padding: 1.5em;
+  border: 2px solid #bbb;
+  background-color: #fff;
+  border-radius: 2em;
+  background-color: hsl(210 70% 30%);
+  color: hsl(210 40% 90%);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
 }
 
 th,
 td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
