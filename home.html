@@ -1,41 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPL Timeline Planner</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./styles.css">
+<title>Bootcamp Timeline Generator</title>
 </head>
 <body>
-    <div>
-  <h1>Bootcamp Timeline Generator</h1>
+<h2>Bootcamp Timeline Generator</h2>
+<label>Start Date: <input type="date" id="startDate"></label><br>
+<label>Upload CSV: <input type="file" id="csvFile"></label><br>
+<button id="generateBtn">Generate Timeline</button>
 
-  <div>
-    <label>Bootcamp Start Date: </label>
-    <input type="date" />
-  </div>
+<table id="timelineTable">
+  <thead>
+    <tr><th>Block</th><th>Module</th><th>Start Date</th><th>End Date</th></tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
-  <div>
-    <input type="file" accept=".csv" />
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Block</th>
-        <th>Module</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Block value</td>
-        <td>Module value</td>
-        <td>Start date value</td>
-        <td>End date value</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<script src="main.js"></script>
 </body>
 </html>
