@@ -17,12 +17,17 @@ const publicHolidays = [
 const decemberShutdownStart = '2025-12-15';
 const decemberShutdownEnd = '2026-01-05';
 
-//Function to check if a date is a holiday or a December Shutdown
+/**
+ * Checks if a given date is a non-working day
+ * Non-working days include weekends (Saturday & Sunday),
+ * South African public holidays, and the December shutdown period
+ * @param {Date} date 
+ * @returns {boolean} - Returns true if the day is a non-working day, otherwise false.
+ */
 function isNonWorkingDay(date){
     const formattedDate = date.toISOString().split("T")[0];
     const day = date.getDay(); // 0 = Sunday, 6 = Saturday
 
-    //is the day a weekend?
     if(day === 0 || day === 6){
         return true;
     }
@@ -32,7 +37,6 @@ function isNonWorkingDay(date){
         return true;
     }
 
-    //is the day a December shutdown?
     const shutdownStart = new Date(decemberShutdownStart);
     const shutdownEnd = new Date(decemberShutdownEnd);
     
@@ -40,18 +44,53 @@ function isNonWorkingDay(date){
         return true;
     }
 
-    //if the date is not a weekend, nor a public holiday, nor a December shutdown then it is a working day.
-    //So, false to all of those conditions
     return false;
 }
 
-//Adds working days to a date
-//This function ensures that only working days count when adding durations. 
-//Holidays, weekends, and shutdown days are automatically skipped.
+/**
+ * Adds a specified number of working days to a given start date for a module
+ * Skips weekends, public holidays, and the December shutdown.
+ * This function counts the day that the module starts as the first day.
+ * @param {Date|String} startDate - Starting date 
+ * @param {number} daysToAdd - Number of working days to add
+ * @returns {Date} - End date after adding the working days
+ */
 function addWorkingDays(startDate, daysToAdd){
     let currentDate = new Date(startDate);
     let addedDays = 0;
 
+
+    //The question now is, when a module starts, does the day it starts count as the first day? Or 
+    // do we start counting from the next day?
+    while(addedDays < daysToAdd){
+        if(!isNonWorkingDay(currentDate)){ // if the day is a working day
+            addedDays++;
+        }
+        if(addedDays < daysToAdd){
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+    }
+    return currentDate;
+}
+
+
+
+/**
+ * Adds a specified number of working days to a given start date for a module
+ * Skips weekends, public holidays, and the December shutdown
+ * This function counts the next day after the module starts the first day.
+
+ * @param {Date|String} startDate - Starting date 
+ * @param {number} daysToAdd - Number of working days to add
+ * @returns {Date} - End date after adding the working days
+ */
+function addWorkingDays(startDate, daysToAdd){
+    let currentDate = new Date(startDate);
+    let addedDays = 0;
+
+
+    //The question now is, when a module starts, does the day it starts count as the first day? Or 
+    // do we start counting from the next day?
     while(addedDays < daysToAdd){
         currentDate.setDate(currentDate.getDate() + 1);
         if(!isNonWorkingDay(currentDate)){ // if the day is a working day
@@ -61,6 +100,14 @@ function addWorkingDays(startDate, daysToAdd){
     return currentDate;
 }
 
+console.log(`Adding 2 days from Feb 14th is: ${addWorkingDays('2025-02-10', 2)}`);
+
+/**
+ * Parses a CSV file, and converts it into an array of module objects
+ * Each object contains a block name, module name, and duration days
+ * @param {*} file - CSV file uploaded by the user
+ * @param {*} callback - function called with the parsed array
+ */
 function parseCSVFile(file, callback){
     const reader = new FileReader();
     reader.onload = function(e) {
@@ -75,6 +122,13 @@ function parseCSVFile(file, callback){
     reader.readAsText(file);
 }
 
+/**
+ * Generates a bootcamp timeline based on start date and modules
+ * Calculates start and end dates for each module using working days
+ * @param {Date|String} startDateStr - Start date for the bootcamp
+ * @param {Array} modules - Array of objects with {block, module, duration}
+ * @returns {Array} - Array of objects with {block, module, start date, end date}
+ */
 function generateTimeline(startDateStr, modules) {
     let currentDate = new Date(startDateStr);
     const timeline = [];
