@@ -7,14 +7,14 @@ The Bootcamp Timeline Generator is a tool that takes in a start date and a CSV f
 It automatically excludes weekends, South African public holidays, and the December shutdown period (15 Dec – 5 Jan) when calculating working days.
 
 #### 2. Data Requirements
-2.1 CSV File Format
+&nbsp;2.1 CSV File Format
 
-The CSV must contain three columns in this exact order:
+&nbsp;&nbsp;The CSV must contain three columns in this exact order:
 
-**Block	Module	Duration**
-Block 1	Introduction to HTML	5
-Block 1	CSS Basics	7
-Block 2	JavaScript Fundamentals	10
+&nbsp;&nbsp;**Block	Module	Duration**
+&nbsp;&nbsp;Block 1	Introduction to HTML	5
+&nbsp;&nbsp;Block 1	CSS Basics	7
+&nbsp;&nbsp;Block 2	JavaScript Fundamentals	10
 
 **Block**: The block or phase name (e.g., Block 1, Block 2).
 
@@ -29,10 +29,6 @@ Important Notes:
 - Durations should be written in working days (e.g., 5 = one week).
 
 2.2 Example CSV (ready to upload)
-|Block|Module|Duration
-Block 1,Introduction to HTML,5
-Block 1,CSS Basics,7
-Block 2,JavaScript Fundamentals,10
 
 | Block | Module | Duration |
 | :------- | :------: | -------: |
