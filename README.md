@@ -29,10 +29,20 @@ Important Notes:
 - Durations should be written in working days (e.g., 5 = one week).
 
 2.2 Example CSV (ready to upload)
-Block,Module,Duration
+|Block|Module|Duration
 Block 1,Introduction to HTML,5
 Block 1,CSS Basics,7
 Block 2,JavaScript Fundamentals,10
+
+| Block | Module | Duration |
+| :------- | :------: | -------: |
+| Block 1   | Introduction to HTML   | 5    |
+| Block 1  | CSS Basics  | 7  |
+| Block 1  | JavaScript Fundamentals  | 10  |
+| Block 1  | React Native  | 18  |
+| Block 1  | React Hooks  | 22  |
+| Block 1  | UI/UX Intro  | 20  |
+| Block 1  | User Journey  | 10  |
 
 #### 3. Steps to Use the Generator
 
