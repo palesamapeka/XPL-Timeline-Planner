@@ -16,11 +16,11 @@ It automatically excludes weekends, South African public holidays, and the Decem
 &nbsp;&nbsp;Block 1	CSS Basics	7
 &nbsp;&nbsp;Block 2	JavaScript Fundamentals	10
 
-**Block**: The block or phase name (e.g., Block 1, Block 2).
+&nbsp;&nbsp;**Block**: The block or phase name (e.g., Block 1, Block 2).
 
-**Module**: The specific training module name (e.g. Intro to Object Oriented Programming).
+&nbsp;&nbsp;**Module**: The specific training module name (e.g. Intro to Object Oriented Programming).
 
-**Duration**: Number of working days (integer).
+&nbsp;&nbsp;**Duration**: Number of working days (integer).
 
 Important Notes:
 
@@ -64,10 +64,11 @@ Important Notes:
 
 Once generated, the timeline table shows:
 
-Block	Module	Duration	Start Date	End Date
-Block 1	Introduction to HTML	1 week	2025-01-06	2025-01-10
-Block 1	CSS Basics	1 week and 2 days	2025-01-13	2025-01-21
-Block 2	JavaScript Fundamentals	2 weeks	2025-01-22	2025-02-04
+|Block|	Module|	Duration|	Start Date|	End Date
+| :------- | :------: | -------: | -------: | -------: |
+|Block 1|	Introduction to HTML|	1 week|	2025-01-06|	2025-01-10|
+Block 1|	CSS Basics|	1 week and 2 days|	2025-01-13|	2025-01-21|
+Block 2|	JavaScript Fundamentals|	2 weeks|	2025-01-22|	2025-02-04|
 
 Block: Training block name.
 
