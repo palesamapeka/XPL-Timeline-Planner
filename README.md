@@ -66,9 +66,9 @@ Once generated, the timeline table shows:
 
 |Block|	Module|	Duration|	Start Date|	End Date
 | :------- | :------: | -------: | -------: | -------: |
-|Block 1|	Introduction to HTML|	1 week|	2025-01-06|	2025-01-10|
-Block 1|	CSS Basics|	1 week and 2 days|	2025-01-13|	2025-01-21|
-Block 2|	JavaScript Fundamentals|	2 weeks|	2025-01-22|	2025-02-04|
+|Block 1| Introduction to HTML| 1 week| 2025-01-06| 2025-01-10|
+|Block 1| CSS Basics| 1 week and 2 days| 2025-01-13| 2025-01-21|
+|Block 2| JavaScript Fundamentals| 2 weeks| 2025-01-22| 2025-02-04|
 
 Block: Training block name.
 
