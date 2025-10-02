@@ -122,6 +122,20 @@ function parseCSVFile(file, callback){
     reader.readAsText(file);
 }
 
+function formatDuration(days){
+    const weeks = Math.floor(days / 5);
+    const remainder = days % 5;
+    
+    let parts = [];
+    if(weeks > 0){
+        parts.push(`${weeks} week${weeks > 1 ? 's' : ''}`);
+    }
+    if(remainder > 0){
+        parts.push(`${remainder} day${remainder > 1 ? 's' : ''}`);
+    }
+    return parts.length > 0 ? parts.join(' and ') : '0 days';
+}
+
 /**
  * Generates a bootcamp timeline based on start date and modules
  * Calculates start and end dates for each module using working days
@@ -139,6 +153,7 @@ function generateTimeline(startDateStr, modules) {
         timeline.push({
             block: mod.block,
             module: mod.module,
+            duration: formatDuration(mod.duration),
             start: start.toISOString().split('T')[0],
             end: end.toISOString().split('T')[0]
         });
@@ -164,7 +179,12 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 
         timeline.forEach(row => {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${row.block}</td><td>${row.module}</td><td>${row.start}</td><td>${row.end}</td>`;
+            tr.innerHTML = `
+            <td>${row.block}</td>
+            <td>${row.module}</td>
+            <td>${row.duration}</td>
+            <td>${row.start}</td>
+            <td>${row.end}</td>`;
             tbody.appendChild(tr);
         });
     });
