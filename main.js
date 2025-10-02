@@ -124,14 +124,20 @@ function parseCSVFile(file, callback){
 
 function formatDuration(days){
     const weeks = Math.floor(days / 5);
-    const remainder = days % 5;
+    const months = Math.floor(weeks / 4);
+    const remainderWeeks = weeks % 4;
+    const remainderDays = days % 5;
     
     let parts = [];
-    if(weeks > 0){
-        parts.push(`${weeks} week${weeks > 1 ? 's' : ''}`);
+
+    if(months > 0){
+        parts.push(`${months} month${months > 1 ? 's' : ''}`);
     }
-    if(remainder > 0){
-        parts.push(`${remainder} day${remainder > 1 ? 's' : ''}`);
+    if(remainderWeeks > 0){
+        parts.push(`${remainderWeeks} week${remainderWeeks > 1 ? 's' : ''}`);
+    }
+    if(remainderDays > 0){
+        parts.push(`${remainderDays} day${remainderDays > 1 ? 's' : ''}`);
     }
     return parts.length > 0 ? parts.join(' and ') : '0 days';
 }
