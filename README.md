@@ -11,15 +11,15 @@ It automatically excludes weekends, South African public holidays, and the Decem
 
 &nbsp;&nbsp;The CSV must contain three columns in this exact order:
 
-&nbsp;&nbsp;| Block | Module | Duration |
-&nbsp;&nbsp;| :------- | :------: | -------: |
-&nbsp;&nbsp;| Block 1   | Introduction to HTML   | 5    |
-&nbsp;&nbsp;| Block 1  | CSS Basics  | 7  |
-&nbsp;&nbsp;| Block 1  | JavaScript Fundamentals  | 10  |
-&nbsp;&nbsp;| Block 1  | React Native  | 18  |
-&nbsp;&nbsp;| Block 1  | React Hooks  | 22  |
-&nbsp;&nbsp;| Block 1  | UI/UX Intro  | 20  |
-&nbsp;&nbsp;| Block 1  | User Journey  | 10  |
+| Block | Module | Duration |
+| :------- | :------: | -------: |
+| Block 1   | Introduction to HTML   | 5    |
+| Block 1  | CSS Basics  | 7  |
+| Block 1  | JavaScript Fundamentals  | 10  |
+| Block 1  | React Native  | 18  |
+| Block 1  | React Hooks  | 22  |
+| Block 1  | UI/UX Intro  | 20  |
+| Block 1  | User Journey  | 10  |
 
 
 &nbsp;&nbsp;**Block**: The block or phase name (e.g., Block 1, Block 2).
