@@ -1,20 +1,26 @@
 # XPL Bootcamp Timeline Generator - Standard Operating Procedure
 
-#### 1. Purpose
+## 1. Purpose
 
 The Bootcamp Timeline Generator is a tool that takes in a start date and a CSV file of modules, then produces a schedule showing the start date, end date, and duration (in weeks and days) for each module. 
 
 It automatically excludes weekends, South African public holidays, and the December shutdown period (15 Dec – 5 Jan) when calculating working days.
 
-#### 2. Data Requirements
+## 2. Data Requirements
 &nbsp;2.1 CSV File Format
 
 &nbsp;&nbsp;The CSV must contain three columns in this exact order:
 
-&nbsp;&nbsp;**Block	Module	Duration**
-&nbsp;&nbsp;Block 1	Introduction to HTML	5
-&nbsp;&nbsp;Block 1	CSS Basics	7
-&nbsp;&nbsp;Block 2	JavaScript Fundamentals	10
+| Block | Module | Duration |
+| :------- | :------: | -------: |
+| Block 1   | Introduction to HTML   | 5    |
+| Block 1  | CSS Basics  | 7  |
+| Block 1  | JavaScript Fundamentals  | 10  |
+| Block 1  | React Native  | 18  |
+| Block 1  | React Hooks  | 22  |
+| Block 1  | UI/UX Intro  | 20  |
+| Block 1  | User Journey  | 10  |
+
 
 &nbsp;&nbsp;**Block**: The block or phase name (e.g., Block 1, Block 2).
 
@@ -22,7 +28,7 @@ It automatically excludes weekends, South African public holidays, and the Decem
 
 &nbsp;&nbsp;**Duration**: Number of working days (integer).
 
-Important Notes:
+## Important Notes:
 
 - Do not include headers other than **Block, Module, Duration**.
 
@@ -40,7 +46,7 @@ Important Notes:
 | Block 1  | UI/UX Intro  | 20  |
 | Block 1  | User Journey  | 10  |
 
-#### 3. Steps to Use the Generator
+## 3. Steps to Use the Generator
 
 - Open the tool in a browser.
 
@@ -60,11 +66,11 @@ Important Notes:
 
 - The system will process your file and display a table in the browser.
 
-#### 4. Understanding the Results
+## 4. Understanding the Results
 
 Once generated, the timeline table shows:
 
-|Block|	Module|	Duration|	Start Date|	End Date
+|Block|Module|Duration|Start Date|End Date
 | :------- | :------: | -------: | -------: | -------: |
 |Block 1| Introduction to HTML| 1 week| 2025-01-06| 2025-01-10|
 |Block 1| CSS Basics| 1 week and 2 days| 2025-01-13| 2025-01-21|
@@ -81,7 +87,7 @@ Start Date: First working day of the module.
 End Date: Last working day of the module.
 
 
-#### 5. Date Adjustments
+## 5. Date Adjustments
 
 - Weekends are skipped (Saturday & Sunday).
 
@@ -89,7 +95,7 @@ End Date: Last working day of the module.
 
 - December shutdown (15 Dec – 5 Jan) is skipped — modules pause and resume afterward.
 
-#### 6. Troubleshooting
+## 6. Troubleshooting
 
 1. Nothing happens when I click Generate Timeline
 
@@ -104,7 +110,7 @@ End Date: Last working day of the module.
 - Verify durations are entered in working days, not calendar days.
 
 
-#### 7. Best Practices
+## 7. Best Practices
 
 - Always double-check the uploaded CSV before generating.
 
