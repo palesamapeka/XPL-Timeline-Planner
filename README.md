@@ -89,15 +89,15 @@ Once generated, the timeline table shows:
 
 1. Nothing happens when I click Generate Timeline
 
-[x] Check that both a start date and a CSV file are selected.
+- [x] Check that both a start date and a CSV file are selected.
 
 2. Table is empty
 
-[x] Make sure your CSV file is correctly formatted (no blank lines, correct headers).
+- [x] Make sure your CSV file is correctly formatted (no blank lines, correct headers).
 
 3. Wrong dates in timeline
 
-[x] Verify durations are entered in working days, not calendar days.
+- [x] Verify durations are entered in working days, not calendar days.
 
 
 ## 7. Best Practices
