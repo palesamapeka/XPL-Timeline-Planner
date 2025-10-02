@@ -11,15 +11,15 @@ It automatically excludes weekends, South African public holidays, and the Decem
 
 &nbsp;&nbsp;The CSV must contain three columns in this exact order:
 
-| Block | Module | Duration |
-| :------- | :------: | -------: |
-| Block 1   | Introduction to HTML   | 5    |
-| Block 1  | CSS Basics  | 7  |
-| Block 1  | JavaScript Fundamentals  | 10  |
-| Block 1  | React Native  | 18  |
-| Block 1  | React Hooks  | 22  |
-| Block 1  | UI/UX Intro  | 20  |
-| Block 1  | User Journey  | 10  |
+&nbsp;&nbsp;| Block | Module | Duration |
+&nbsp;&nbsp;| :------- | :------: | -------: |
+&nbsp;&nbsp;| Block 1   | Introduction to HTML   | 5    |
+&nbsp;&nbsp;| Block 1  | CSS Basics  | 7  |
+&nbsp;&nbsp;| Block 1  | JavaScript Fundamentals  | 10  |
+&nbsp;&nbsp;| Block 1  | React Native  | 18  |
+&nbsp;&nbsp;| Block 1  | React Hooks  | 22  |
+&nbsp;&nbsp;| Block 1  | UI/UX Intro  | 20  |
+&nbsp;&nbsp;| Block 1  | User Journey  | 10  |
 
 
 &nbsp;&nbsp;**Block**: The block or phase name (e.g., Block 1, Block 2).
@@ -33,18 +33,6 @@ It automatically excludes weekends, South African public holidays, and the Decem
 - Do not include headers other than **Block, Module, Duration**.
 
 - Durations should be written in working days (e.g., 5 = one week).
-
-2.2 Example CSV (ready to upload)
-
-| Block | Module | Duration |
-| :------- | :------: | -------: |
-| Block 1   | Introduction to HTML   | 5    |
-| Block 1  | CSS Basics  | 7  |
-| Block 1  | JavaScript Fundamentals  | 10  |
-| Block 1  | React Native  | 18  |
-| Block 1  | React Hooks  | 22  |
-| Block 1  | UI/UX Intro  | 20  |
-| Block 1  | User Journey  | 10  |
 
 ## 3. Steps to Use the Generator
 
@@ -76,15 +64,17 @@ Once generated, the timeline table shows:
 |Block 1| CSS Basics| 1 week and 2 days| 2025-01-13| 2025-01-21|
 |Block 2| JavaScript Fundamentals| 2 weeks| 2025-01-22| 2025-02-04|
 
-Block: Training block name.
+![alt text](image.png)
 
-Module: Module name.
+**Block**: Training block name.
 
-Duration: Duration in weeks + days (calculated from working days).
+**Module**: Module name.
 
-Start Date: First working day of the module.
+**Duration**: Duration in weeks + days (calculated from working days).
 
-End Date: Last working day of the module.
+**Start Date**: First working day of the module.
+
+**End Date**: Last working day of the module.
 
 
 ## 5. Date Adjustments
@@ -99,15 +89,15 @@ End Date: Last working day of the module.
 
 1. Nothing happens when I click Generate Timeline
 
-- Check that both a start date and a CSV file are selected.
+[] Check that both a start date and a CSV file are selected.
 
 2. Table is empty
 
-- Make sure your CSV file is correctly formatted (no blank lines, correct headers).
+[] Make sure your CSV file is correctly formatted (no blank lines, correct headers).
 
 3. Wrong dates in timeline
 
-- Verify durations are entered in working days, not calendar days.
+[] Verify durations are entered in working days, not calendar days.
 
 
 ## 7. Best Practices
